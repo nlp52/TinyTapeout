@@ -26,10 +26,10 @@ module PairTripleDetector_GL #(parameter MAX_COUNT = 10_000_000)
   wire w;
   wire y;
   wire x; 
-  or top_or (w, in[0], in[1]);
-  and middle_and (y, w, in[2]);
-  and bottom_and (x, in[0], in[1]);
-  or last_or (out[0], y, x);
+  or top_or (w, ui_in[0], ui_in[1]);
+  and middle_and (y, w, ui_in[2]);
+  and bottom_and (x, ui_in[0], ui_in[1]);
+  or last_or (uo_out[0], y, x);
 
 
 endmodule
