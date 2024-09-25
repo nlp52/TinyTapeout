@@ -10,7 +10,7 @@
 `ifndef PAIR_TRIPLE_DETECTOR_GL_V
 `define PAIR_TRIPLE_DETECTOR_GL_V
 
-module PairTripleDetector_GL (# parameter MAX_COUNT = 10_000_000)
+module PairTripleDetector_GL #(parameter MAX_COUNT = 10_000_000)
 (
   input  wire [7:0] ui_in,   //Dedicated inputs- connected to the input switches
   output  wire [7:0] uo_out, //Dedicated outputs- connected to the seven segment display
