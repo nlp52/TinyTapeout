@@ -23,8 +23,6 @@ module tt_um_nlp52_PairTripleDetector #(parameter MAX_COUNT = 10_000_000)
 
 );
   assign uo_out[7:1] = 7'b0;
-  assign ui_in[7:3]= 5'b0;
-  assign uio_in[7:0] = 8'b0;
   assign uio_out[7:0] = 8'b0;
   assign uio_oe[7:0] = 8'b0;
 
