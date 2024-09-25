@@ -13,7 +13,7 @@ Detects a pair or triple
 
 ## How to test
 
-Explain how to use your project
+Run the tests
 
 ## External hardware
 
