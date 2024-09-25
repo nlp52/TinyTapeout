@@ -10,22 +10,26 @@
 `ifndef PAIR_TRIPLE_DETECTOR_GL_V
 `define PAIR_TRIPLE_DETECTOR_GL_V
 
-module PairTripleDetector_GL
+module PairTripleDetector_GL (# parameter MAX_COUNT = 10_000_000)
 (
-  input  wire in0,
-  input  wire in1,
-  input  wire in2,
-  output wire out
+  input  wire [7:0] ui_in,   //Dedicated inputs- connected to the input switches
+  output  wire [7:0] uo_out, //Dedicated outputs- connected to the seven segment display
+  input  wire [7:0] ui_in,   //IOs: Bidirectional Input Path
+  output wire [7:0] ui_out,  //IOs: Bidirectional Output Path
+  output wire [7:0] uio_oe,  //IOs: Bidirectional Enable Path (active high: 0=input, 1=output)
+  input wire ena,            //goes high when design enabled
+  input wire clk,            //clock
+  input wire rst_n           //reset n- low to reset
 
 );
 
   wire w;
   wire y;
   wire x; 
-  or top_or (w, in0, in1);
-  and middle_and (y, w, in2);
-  and bottom_and (x, in0, in1);
-  or last_or (out, y, x);
+  or top_or (w, in[0], in[1]);
+  and middle_and (y, w, in[2]);
+  and bottom_and (x, in[0], in[1]);
+  or last_or (out[0], y, x);
 
 
 endmodule
