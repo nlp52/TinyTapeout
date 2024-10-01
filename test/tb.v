@@ -31,10 +31,10 @@ module tb ();
    tt_um_nlp52_PairTripleDetector #(.MAX_COUNT(10000)) tt_um_nlp52_PairTripleDetector(
 
       // Include power ports for the Gate Level test:
-`ifdef GL_TEST
-      .VPWR(1'b1),
-      .VGND(1'b0),
-`endif
+    `ifdef GL_TEST
+          .VPWR(1'b1),
+          .VGND(1'b0),
+    `endif
 
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
