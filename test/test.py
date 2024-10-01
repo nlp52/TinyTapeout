@@ -30,11 +30,13 @@ async def test_project(dut):
     # Test various input cases
     test_cases = [
         (0x00, 0),   # Test with ui_in = 0x00, expect uo_out[0] = 0
-        (0x01, 1),   # Test with ui_in = 0x01, expect uo_out[0] = 1
+        (0x01, 0),   # Test with ui_in = 0x01, expect uo_out[0] = 0
+        (0x02, 0),
         (0x03, 1),   # Test with ui_in = 0x03, expect uo_out[0] = 1
         (0x04, 0),   # Test with ui_in = 0x04, expect uo_out[0] = 0
-        (0x07, 1),   # Test with ui_in = 0x07, expect uo_out[0] = 1
-        (0xFF, 1)    # Test with ui_in = 0xFF, expect uo_out[0] = 1
+        (0x05, 1),
+        (0x06, 1),
+        (0x07, 1)    # Test with ui_in = 0x07, expect uo_out[0] = 1
     ]
 
     for ui_value, expected_output in test_cases:
