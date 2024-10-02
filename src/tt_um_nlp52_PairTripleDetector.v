@@ -10,7 +10,7 @@
 `ifndef TT_UM_NLP52_PAIRTRIPLEDETECTOR_V
 `define TT_UM_NLP52_PAIRTRIPLEDETECTOR_V
 
-module tt_um_nlp52_PairTripleDetector #(parameter MAX_COUNT = 10_000_000)
+module tt_um_nlp52_PairTripleDetector
 (
   input  wire [7:0] ui_in,   //Dedicated inputs- connected to the input switches
   output  wire [7:0] uo_out, //Dedicated outputs- connected to the seven segment display
