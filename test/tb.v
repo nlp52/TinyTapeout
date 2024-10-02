@@ -28,7 +28,7 @@ module tb ();
 `endif
 
   // Replace tt_um_example with your module name:
-   tt_um_nlp52_PairTripleDetector #(.MAX_COUNT(10000)) tt_um_nlp52_PairTripleDetector(
+   tt_um_nlp52_PairTripleDetector(
 
       // Include power ports for the Gate Level test:
     `ifdef GL_TEST
