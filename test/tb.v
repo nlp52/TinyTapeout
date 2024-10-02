@@ -28,13 +28,13 @@ module tb ();
 `endif
 
   // Replace tt_um_example with your module name:
-   tt_um_nlp52_PairTripleDetector(
+ src/tt_um_nlp52_PairTripleDetector (
 
       // Include power ports for the Gate Level test:
-    `ifdef GL_TEST
-          .VPWR(1'b1),
-          .VGND(1'b0),
-    `endif
+`ifdef GL_TEST
+      .VPWR(VPWR),
+      .VGND(VGND),
+`endif
 
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
